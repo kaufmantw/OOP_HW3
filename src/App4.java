@@ -10,8 +10,11 @@ public class App4 extends Application{
         cs331FruitNinjaFrame frame = new cs331FruitNinjaFrame(primaryStage);
         
         // Your code goes here!!
-        frame.addGame(new Game());
+        Game game = new Game();
+        frame.addGame(game);
         frame.setTop(new cs331ScoreController());
+
+        game.startGame();
         
     }
     public static void main(String[] args) throws Exception {
