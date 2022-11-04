@@ -13,7 +13,6 @@ public class App4 extends Application{
         Game game = new Game();
         frame.addGame(game);
         frame.setTop(new cs331ScoreController());
-
         game.startGame();
         
     }
