@@ -9,6 +9,7 @@ public class Pear extends cs331Fruit implements Choppable{
     @Override
     public void chop(){
         this.splash();
+        this.chopGraphically();
     }
     
 }

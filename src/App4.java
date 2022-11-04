@@ -8,11 +8,12 @@ public class App4 extends Application{
 
     public void start(Stage primaryStage) {
         cs331FruitNinjaFrame frame = new cs331FruitNinjaFrame(primaryStage);
+        cs331ScoreController controller = new cs331ScoreController();
         
         // Your code goes here!!
-        Game game = new Game();
+        Game game = new Game(controller);
         frame.addGame(game);
-        frame.setTop(new cs331ScoreController());
+        frame.setTop(controller);
         game.startGame();
         
     }

@@ -8,6 +8,7 @@ public class Peach extends cs331Fruit implements Choppable{
     }
     public void chop(){
         this.splash();
+        this.chopGraphically();
     }
     
 }

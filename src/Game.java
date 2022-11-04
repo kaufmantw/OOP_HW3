@@ -2,14 +2,17 @@ import fruitNinjaHelper.cs331Blade;
 import fruitNinjaHelper.cs331Bomb;
 import fruitNinjaHelper.cs331Fruit;
 import fruitNinjaHelper.cs331FruitNinjaGame;
+import fruitNinjaHelper.cs331ScoreController;
 
 public class Game extends cs331FruitNinjaGame{
     cs331Blade blade;
+    cs331ScoreController control;
 
     // You may need to add constructor
-    public Game(){
+    public Game(cs331ScoreController controller){
         //updateChoppable(launchItem());
         this.blade = new cs331Blade(null);
+        this.control = controller;
         this.addBlade(blade);
     }
 
@@ -22,6 +25,11 @@ public class Game extends cs331FruitNinjaGame{
         }
         else if (object instanceof Bomb){
             ((Bomb)object).moveBomb();
+        }
+ 
+        if (this.blade.checkIntersection(object)){
+            object.chop();
+            control.addToScore(5);
         }
     }
 

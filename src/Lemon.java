@@ -10,5 +10,6 @@ public class Lemon extends cs331Fruit implements Choppable{
     @Override
     public void chop(){
         this.splash();
+        this.chopGraphically();
     }
 }

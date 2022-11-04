@@ -9,5 +9,6 @@ public class Apple extends cs331Fruit implements Choppable{
     @Override
     public void chop(){
         this.splash();
+        this.chopGraphically();
     }
 }
