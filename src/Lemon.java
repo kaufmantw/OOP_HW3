@@ -3,6 +3,8 @@ import fruitNinjaHelper.cs331Fruit;
 
 public class Lemon extends cs331Fruit implements Choppable{
 
+    private static final int SCORE = 5;
+
     public Lemon(){
         this.setImage(Constants.LEMON_PATH);
         this.wash();
@@ -18,5 +20,10 @@ public class Lemon extends cs331Fruit implements Choppable{
     @Override
     public void moveObject(){
         this.moveFruit();
+    }
+
+    @Override
+    public int getScore(){
+        return SCORE;
     }
 }

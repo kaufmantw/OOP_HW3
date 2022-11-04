@@ -31,7 +31,7 @@ public class Game extends cs331FruitNinjaGame{
  
         if (this.blade.checkIntersection(object)){
             object.chop();
-            control.addToScore(5);
+            this.control.addToScore(object.getScore());
         }
     }
 
@@ -45,7 +45,6 @@ public class Game extends cs331FruitNinjaGame{
                 return bomb;
 
             case 1:
-                //fruit 1
                 Apple apple = new Apple();
                 return apple;
 

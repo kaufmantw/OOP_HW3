@@ -1,6 +1,8 @@
 import fruitNinjaHelper.cs331Bomb;
 
 public class Bomb extends cs331Bomb implements Choppable{
+
+    private static final int SCORE = 0;
     
     public Bomb(){
         this.setImage();
@@ -15,5 +17,10 @@ public class Bomb extends cs331Bomb implements Choppable{
     @Override
     public void moveObject(){
         this.moveBomb();
+    }
+
+    @Override
+    public int getScore(){
+        return SCORE;
     }
 }
