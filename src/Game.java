@@ -10,7 +10,6 @@ public class Game extends cs331FruitNinjaGame{
 
     // You may need to add constructor
     public Game(cs331ScoreController controller){
-        //updateChoppable(launchItem());
         this.blade = new cs331Blade(null);
         this.control = controller;
         this.addBlade(blade);
@@ -20,13 +19,6 @@ public class Game extends cs331FruitNinjaGame{
     public void updateChoppable(Choppable object) {
         
         // Your code goes here
-        /* 
-        if(object instanceof cs331Fruit){
-            ((cs331Fruit)object).moveFruit();
-        }
-        else if (object instanceof Bomb){
-            ((Bomb)object).moveBomb();
-        } */
         object.moveObject();
  
         if (this.blade.checkIntersection(object)){
